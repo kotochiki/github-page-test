@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+<style>
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  padding: 90px 0 0;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+  z-index: 99;
+}
+
+@media (max-width: 767.98px) {
+  .sidebar {
+    top: 5rem;
+    padding: 0;
+  }
+}
+
+.navbar {
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .1);
+}
+
+@media (min-width: 767.98px) {
+  .navbar {
+    top: 0;
+    position: sticky;
+    z-index: 999;
+  }
+}
+
+.sidebar .nav-link {
+  color: #333;
+}
+
+.sidebar .nav-link.active {
+  color: #0d6efd;
+}
+		
+.callout {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+  h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+  code {
+    border-radius: 3px;
+  }
+  & + .bs-callout {
+    margin-top: -5px;
+  }
+}
+@each $name,$color in (default,#777),(primary,#428bca),(success,#5cb85c),(danger,#d9534f),(warning,#f0ad4e),(info,#5bc0de), (bdc,#29527a) {
+  .callout-#{$name} {
+    border-left-color: $color;
+    h4 {
+      color: $color;
+    }
+  }
+}
+
+	.nav-pills .nav-link.active {
+  background-color: #e9ecef; /* アクティブなボタンの背景色 */
+  color: #000000; /* アクティブなボタンのテキスト色 */
+}
+main {
+  position: relative;
+}
+		
+</style>
+    <title>contentsTEST</title>
+</head>
+
+<body>
+	<nav class="navbar navbar-light bg-light p-3 sticky-top">
+  		<div class="d-flex col-12 col-md-3 col-lg-2 mb-2 mb-lg-0 flex-wrap flex-md-nowrap justify-content-between">
+     		 <a class="navbar-brand" href="#">
+          Simple Dashboard
+      		</a>
+  		</div>
+	</nav>
+	
+	<div class="container-fluid">
+    <div class="row flex-nowrap">
+      <div class="col-1 col-md-3 col-xl-2 px-0 bg-light sidebar" style="min-width:60px"　id="sidebar">
+		  	<!-- sidebar content goes in here -->
+            <div class="d-flex flex-column pt-3 text-white min-vh-100">
+				<div class="pt-md-3">
+                <ul class="nav nav-pills nav-fill flex-column" role="tablist" aria-orientation="vertical">
+                   
+					<li class="nav-item ">
+                        <a class="nav-link active align-middle px-3" id="section1-tab" data-bs-toggle="pill" href="#memu1" role="tab" aria-controls="#menu1" aria-selected="true">
+                            <div class="d-flex align-items-center">
+  								<i class="bi bi-person-circle" style="font-size: 24px;"></i>
+  								<span class="ml-2 d-none d-md-inline">Dashboard</span>
+							</div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link align-middle" id="section2-tab" data-bs-toggle="pill" href="#menu2" role="tab" aria-controls="#menu2" aria-selected="true">
+                            <div class="d-flex align-items-center">
+         	 					<i class="bi bi-people-fill" style="font-size: 24px;"></i>
+          						<span class="ml-2 d-none d-md-inline">Orders</span>
+							</div>
+						</a>
+                    </li>
+                    <li class="nav-item">
+                      <a  class="nav-link align-middle" id="section3-tab" data-bs-toggle="pill" href="#menu3" role="tab" aria-controls="#menu3" aria-selected="true">
+                      <div class="d-flex align-items-center">
+          						<i class="bi bi-music-note-list" style="font-size: 24px;"></i>
+           						<span class="ml-2 d-none d-md-inline">Products</span>
+						  </div>
+					  </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link align-middle" id="section4-tab" data-bs-toggle="pill" href="#menu4" role="tab" aria-controls="#menu4" aria-selected="true">
+                            <div class="d-flex align-items-center">
+          						<i class="bi bi-file-text" style="font-size: 24px;"></i>
+       						  <span class="ml-2 d-none d-md-inline">Customers</span>
+							</div>
+						</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link align-middle" id="section5-tab" data-bs-toggle="pill" href="#menu5" role="tab" aria-controls="#menu5" aria-selected="true">
+                            <div class="d-flex align-items-center">
+          						<i class="bi bi-chat-dots" style="font-size: 24px;"></i>
+          						<span class="ml-2 d-none d-md-inline">Reports</span>
+							</div>
+						</a>
+                    </li>
+                </ul>
+				</div>
+                
+            </div>
+		  </div>
+	
+<!-- メインコンテンツ -->
+<main class="col-11 col-sm-11 col-md-9 ml-auto col-xl-10 py-5 px-5 scroll-content" data-bs-spy="scroll" data-bs-target="#sidebar" data-offset="50" data-bs-smooth-scroll="true">
+<div>
+	<h1 class="h2">Dashboard</h1>
+			
+<nav aria-label="breadcrumb">
+	<ol class="breadcrumb">
+    	<li class="breadcrumb-item"><a href="#">
+		<div class="d-flex align-items-center">
+          <i class="bi bi-house-door-fill"></i>
+			</div>
+		</a></li>
+	  
+    	<li class="breadcrumb-item active" aria-current="page">Overview</li>
+	</ol>
+</nav>
+
+<div id="menu1" class="content-block">
+<h2 class="h2">Dashboard</h2>
+<p>This is the homepage of a simple admin interface which is part of a tutorial written on Themesberg</p>
+ 
+            <div>
+                <!-- コンテンツ写真 -->
+                <img src="person.jpg" alt="人物の写真" class="img-fluid">
+            </div>
+            <div>
+                <!-- 名前 -->
+                <h3 class="h3">contents</h3>
+                <!-- リストグループ -->
+                <ul class="list-group">
+                    <li class="list-group-item">項目1</li>
+                    <li class="list-group-item">項目2</li>
+                    <li class="list-group-item">項目3</li>
+					<li class="list-group-item">項目4</li>
+					<li class="list-group-item">項目5</li>
+                </ul>
+            </div>
+			
+	<div class="callout callout-default" >
+  <h4><div class="d-flex align-items-center">
+		<span class="mr-2">
+          <i class="bi bi-chat-right-text-fill" style="font-size: 20px;"></i>
+		</span>
+Default Callout</div></h4>
+  This is a default callout.これはテストです。
+</div>
+</div>
+			
+       <!-- コンテンツ写真 -->
+<div id="menu2" class="content-block">
+	<img id="orders-section" src="person.jpg" alt="写真02" class="img-fluid">
+</div>   
+			
+			
+                <!-- 名前 -->
+		<div id="menu3" class="content-block">
+                <h5 class="h3">contents</h5>
+                <!-- リストグループ -->
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">項目1</li>
+                    <li class="list-group-item">項目2</li>
+                    <li class="list-group-item">項目3</li>
+					<li class="list-group-item">項目4</li>
+					<li class="list-group-item">項目5</li>
+                </ul>
+		</div>
+		
+       <h6 id="menu4" class="h3">Dashboard</h6>
+       </div>
+      </main>
+		</div>
+		</div>
+		
+
+	
+    
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+
+	
+<script>
+  // スクロールスパイを有効化
+  $('main').scrollspy({ target: '#sidebar' });
+</script>
+	
+<script>
+  var navLinks = Array.from(document.querySelectorAll('.nav-link'));
+
+  navLinks.forEach(function(navLink) {
+    navLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      navLinks.forEach(function(link) {
+        link.classList.remove('active');
+      });
+      this.classList.add('active');
+    });
+  });
+</script>
+	
+</body>
+
+</html>
