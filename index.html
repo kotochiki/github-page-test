@@ -77,6 +77,15 @@
   background-color: #e9ecef; /* アクティブなボタンの背景色 */
   color: #000000; /* アクティブなボタンのテキスト色 */
 }
+	
+.m-date {
+width: 180px;/* 最大文字数に応じて調整 */
+}
+
+.m-category{
+width: 180px;/* 最大文字数に応じて調整 */
+}
+
 		
 </style>
     <title>contentsTEST</title>
@@ -93,11 +102,11 @@
 	</nav>
 	
 	<div class="container-fluid">
-    <div class="row flex-nowrap">
+    <div class="row row-0 flex-nowrap">
       <div class="col-1 col-md-3 col-xl-2 px-0 bg-light sidebar" style="min-width:60px">
 		  	<!-- sidebar content goes in here -->
-            <div class="d-flex flex-column pt-3 text-white min-vh-100">
-				<div class="pt-md-3">
+            <div class="d-flex flex-column pt-2 pt-md-0 text-white min-vh-100">
+				<div class="pt-1 pt-md-4">
                 <ul id="sidebar" class="nav nav-pills nav-fill flex-column">
                    
 					<li class="nav-item py-1">
@@ -120,7 +129,7 @@
                       <a  class="nav-link align-middle" href="#menu3">
                       <div class="d-flex align-items-center">
           						<i class="bi bi-music-note-list" style="font-size: 24px;"></i>
-           						<span class="ml-2 d-none d-md-inline">Songs</span>
+           						<span class="ml-2 d-none d-md-inline">Playlist</span>
 						  </div>
 					  </a>
                     </li>
@@ -147,12 +156,12 @@
 		  </div>
 	
 <!-- メインコンテンツ -->
-<main class="col-11 col-sm-11 col-md-9 col-xl-8 ml-auto mr-lg-0 mr-xl-auto py-5 px-5" style="max-width: 1200px min-width: 500px">
+<main class="col-11 col-sm-11 col-md-9 col-xl-8 ml-auto mr-lg-0 mr-xl-auto py-4 py-md-5 px-5" style="max-width: 1200px min-width: 500px">
 <div>
-	<h1 id="menu1" class="h2">プロフィール</h1>
+	<h1 id="menu1" class="h2" style="padding-top: 120px; margin-top: -120px;">プロフィール</h1>
 			
-<nav aria-label="breadcrumb">
-	<ol class="breadcrumb py-1 px-3">
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+	<ol class="breadcrumb py-1 px-3" style="align-items: center">
     	<li class="breadcrumb-item"><a href="#">
 		<div class="d-flex align-items-center">
           <i class="bi bi-house-door-fill"></i>
@@ -177,13 +186,51 @@
                 
                 <!-- リストグループ -->
                 <ul class="list-group py-3">
-                    <li class="list-group-item"><b>PT学園</b>　　２年D組</li>
-                    <li class="list-group-item"><b>部　活</b>　　剣道部→新聞部　</li>
-                    <li class="list-group-item"><b>得意科目</b>　国語</li>
-					<li class="list-group-item"><b>誕生日</b>　　２月６日（水瓶座）</li>
-					<li class="list-group-item"><b>血液型</b>　　B型</li>
-					<li class="list-group-item"><b>身　長</b>　　１８３cm</li>
+                   
+					<li class="list-group-item d-flex flex-wrap" style="align-items: center">
+						<div class="col-2">
+							<div style="min-width: 100px"><b>ＰＴ学園</b></div>
+						</div>
+						<div class="d-flex col-6 ml-5" style="align-items: flex-end;">２年Ｄ組</div>
+					</li>
+					
+					<li class="list-group-item d-flex flex-wrap" style="align-items: center">
+						<div class="col-2">
+							<div style="min-width: 100px"><b>部　　活</b></div>
+						</div>
+						<div class="d-flex col-6 ml-5" style="align-items: flex-end;">剣道部→新聞部</div>
+					</li>
+					
+					<li class="list-group-item d-flex flex-wrap" style="align-items: center">
+						<div class="col-2">
+							<div style="min-width: 100px"><b>得意科目</b></div>
+						</div>
+						<div class="d-flex col-6 ml-5" style="align-items: flex-end;">国語</div>
+					</li>
+					
+					<li class="list-group-item d-flex flex-wrap" style="align-items: center">
+						<div class="col-2">
+							<div style="min-width: 100px"><b>誕&ensp;生&ensp;日</b></div>
+						</div>
+						<div class="d-flex col-6 ml-5" style="align-items: flex-end;">２月６日（水瓶座）</div>
+					</li>
+					
+					<li class="list-group-item d-flex flex-wrap" style="align-items: center">
+						<div class="col-2">
+							<div style="min-width: 100px"><b>血&ensp;液&ensp;型</b></div>
+						</div>
+						<div class="d-flex col-6 ml-5" style="align-items: flex-end;">Ｂ型</div>
+					</li>
+					
+					<li class="list-group-item d-flex flex-wrap" style="align-items: center">
+						<div class="col-2">
+							<div style="min-width: 100px"><b>身　　長</b></div>
+						</div>
+						<div class="d-flex col-6 ml-5" style="align-items: flex-end;">１８３cm</div>
+					</li>
+                    
                 </ul>
+				
 				<div class="callout callout-default" >
   				<h4 class="h5"><div class="d-flex align-items-center">
 					<span class="mr-2">
@@ -196,32 +243,72 @@
 	
 </div>
 	<div class="py-4">
-	<h3 class="h3">関係図</h3>
+	<h3 id="menu2" class="h3" style="padding-top: 100px; margin-top: -100px;">関係図</h3>
 		<p>準備中です。</p>
        <!-- コンテンツ写真 -->
-	<img id="menu2" src="person.jpg" alt="image02" class="img-fluid" width="500" height="200">
+	<img src="../2023_07.14/2023.07.14/person.jpg" alt="image02" class="img-fluid" width="500" height="200">
   </div>
 			
 			
                 <!-- 名前 -->
-		<div class="content-block  py-5">
-                <h5  id="menu3" class="h3">イメージソング</h5>
+		<div class="content-block py-5">
+                <h5  id="menu3" class="h3" style="padding-top: 120px; margin-top: -120px;">イメージソング</h5>
                 <!-- リストグループ -->
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><i class="bi bi-play-circle pr-1" style="color: #A0A0A0"></i><b class="px-1">crossing field</b><br><span class="px-4" style="font-size: 14px; color: #A0A0A0">LiSA</span><br><a href="https://youtu.be/ilqVDPuhZLA" class="px-4">https://youtu.be/ilqVDPuhZLA</a></li>
 					
-                    <li class="list-group-item"><i class="bi bi-play-circle pr-1" style="color: #A0A0A0"></i><b class="px-1">プライド革命</b><br><span class="px-4" style="font-size: 14px; color: #A0A0A0">CHiCO with HoneyWorks</span><br><a href="https://youtu.be/EYiNo2kLAHw" class="px-4">https://youtu.be/EYiNo2kLAHw</a></li>
+                    <li class="list-group-item d-flex flex-wrap" style="align-items: center">
+						<div class="col-12 col-md-auto">
+							<div class="m-date"><i class="bi bi-play-circle pr-1" style="color: #A0A0A0"></i><b class="px-1">crossing field</b></div>
+						</div>
+							<div class="m-category ml-4 col-12 col-md-auto" style="font-size: 14px; color: #A0A0A0">LiSA</div>
+							<div class="col-12 col-md-12 col-lg-4 ml-4"><a href="https://youtu.be/ilqVDPuhZLA">https://youtu.be/ilqVDPuhZLA</a></div>
+					</li>
 					
-                    <li class="list-group-item"><i class="bi bi-play-circle pr-1" style="color: #A0A0A0"></i><b class="px-1">それは小さな光のような</b><br><span class="px-4" style="font-size: 14px; color: #A0A0A0">酸欠少女さユり</span><br><a href="https://youtu.be/M1ajQuujwKk" class="px-4">https://youtu.be/M1ajQuujwKk</a></li>
+					<li class="list-group-item d-flex flex-wrap" style="align-items: center">
+						<div class="col-12 col-md-auto">
+							<div class="m-date"><i class="bi bi-play-circle pr-1" style="color: #A0A0A0"></i><b class="px-1">プライド革命</b></div>
+						</div>
+							<div class="m-category ml-4 col-12 col-md-auto" style="font-size: 14px; color: #A0A0A0">CHiCO with HoneyWorks</div>
+							<div class="col-12 col-md-12 col-lg-4 ml-4"><a href="https://youtu.be/EYiNo2kLAHw">https://youtu.be/EYiNo2kLAHw</a></div>
+					</li>
 					
-					<li class="list-group-item"><i class="bi bi-play-circle pr-1" style="color: #A0A0A0"></i><b class="px-1">桜ロック</b><br><span class="px-4" style="font-size: 14px; color: #A0A0A0">CHERRYBLOSSOM</span><br><a href="https://youtu.be/d8wHWW3eX3E" class="px-4">https://youtu.be/d8wHWW3eX3E</a></li>
+                   <li class="list-group-item d-flex flex-wrap" style="align-items: center">
+						<div class="col-12 col-md-auto">
+							<div class="m-date"><i class="bi bi-play-circle pr-1" style="color: #A0A0A0"></i><b class="px-1">それは小さな光のような</b></div>
+						</div>
+							<div class="m-category ml-4 col-12 col-md-auto" style="font-size: 14px; color: #A0A0A0">酸欠少女さユり</div>
+							<div class="col-12 col-md-12 col-lg-4 ml-4"><a href="https://youtu.be/M1ajQuujwKk">https://youtu.be/M1ajQuujwKk</a></div>
+					</li>
 					
-					<li class="list-group-item"><i class="bi bi-play-circle pr-1" style="color: #A0A0A0"></i><b class="px-1">Knight of Firmament</b><br><span class="px-4" style="font-size: 14px; color: #A0A0A0">EYE XY feat.Yoneko</span></li>
+					<li class="list-group-item d-flex flex-wrap" style="align-items: center">
+						<div class="col-12 col-md-auto">
+							<div class="m-date"><i class="bi bi-play-circle pr-1" style="color: #A0A0A0"></i><b class="px-1">桜ロック</b></div>
+						</div>
+							<div class="m-category ml-4 col-12 col-md-auto" style="font-size: 14px; color: #A0A0A0">CHERRYBLOSSOM</div>
+							<div class="col-12 col-md-12 col-lg-4 ml-4"><a href="https://youtu.be/d8wHWW3eX3E">https://youtu.be/d8wHWW3eX3E</a></div>
+					</li>
+					
+                    <li class="list-group-item d-flex flex-wrap" style="align-items: center">
+						<div class="col-12 col-md-auto">
+							<div class="m-date"><i class="bi bi-play-circle pr-1" style="color: #A0A0A0"></i><b class="px-1">海底ファミリーレストラン</b></div>
+						</div>
+							<div class="m-category ml-4 col-12 col-md-auto" style="font-size: 14px; color: #A0A0A0">くるりんご feat.初音ミク</div>
+							<div class="col-12 col-md-12 col-lg-4 ml-4"></div>
+					</li>
+					
+					<li class="list-group-item d-flex flex-wrap" style="align-items: center">
+						<div class="col-12 col-md-auto">
+							<div class="m-date"><i class="bi bi-play-circle pr-1" style="color: #A0A0A0"></i><b class="px-1">Knight of Firmament</b></div>
+						</div>
+							<div class="m-category ml-4 col-12 col-md-auto" style="font-size: 14px; color: #A0A0A0">EYE XY feat.Yoneko</div>
+							<div class="col-12 col-md-12 col-lg-4 ml-4"></div>
+					</li>
+					
                 </ul>
-		</div>
+				</div>
 		
-       <h6 id="menu4" class="h3">詳細</h6>
-		<p>紫髪兄妹の兄。やんちゃなドルオタ。おっとりした子とおおらかな子とは相性が良い。<br><br>家族構成：母、父、姉（故人）妹（<a href="">櫻咲 晴翼</a>）<br>クラスメイト：<a href="">兎西 かや</a>、<a href="">奏吟 琴</a><br><br>
+       <h6 id="menu4" class="h3" style="padding-top: 120px; margin-top: -120px;">詳細</h6>
+		<p>紫髪兄妹の兄。やんちゃなドルオタ。おっとりした子とおおらかな子とは相性が良い。<br><br><span style="display: inline-block; padding-left: 5em; text-indent: -5em;">家族構成：母、父、姉（故人）、妹（<a href="">櫻咲 晴翼</a>）</span><br><br><span style="display: inline-block; padding-left: 5.25em; text-indent: -5.25em;">クラスメイト：<a href="">兎西 かや</a>、<a href="">奏吟 琴</a></span><br><br>
 			一人称：俺<br>二人称：お前、君<br>三人称：あいつ、あの人<br><br>
 			紫髪で瞳は銀色で猫目。重度のシスコン。勉学を得意としており学年首位争いに名を連ねる。<br>
 			口癖が「由々しき事態」であるため、あだ名は『ゆゆ男（お）』（命名は<a href="">黒崎 葉月</a>）。<br><br>
@@ -231,7 +318,7 @@
 			苦手なことは恋愛関係に巻き込まれること。</p>
 	
 		<div class="py-4">
-		<h7 id="menu5" class="h3">代表的な台詞</h7>
+		<h7 id="menu5" class="h3" style="padding-top: 120px; margin-top: -120px;">代表的な台詞</h7>
 		<p>これはテストです。<br>「代表的な台詞」は準備中です。<span style="color: #A0A0A0">代表的な台詞が無いなんて由々しき事態だ…！</span></p>
 		</div>	
        </div>
@@ -250,7 +337,7 @@
 <script type="text/javascript">
 
  $('a[href^="#"]').click(function(){
-	 var headerHight = 100;
+	 var headerHight = 10;
    var speed = 600;　//スクロールスピード
    var href= $(this).attr("href");
    var target = $(href == "#" || href == "" ? 'html' : href);
